@@ -8,6 +8,10 @@ header, header * {
     color: #ffffff !important;
 }
 
+header a, header a:hover {
+     text-decoration: none !important;
+}
+
 header h1, header dl {
     display: inline-block !important;
     vertical-align: text-bottom;
@@ -32,6 +36,14 @@ header #logo {
     height: 1em;
     vertical-align: text-bottom;
     margin-bottom: 5px;
+}
+
+a, a:hover {
+    color: #D11D17;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 article {
@@ -74,13 +86,4 @@ article h1 {
 .link-list{
     list-style-type: none;
     margin: 0px;
-}
-
-:not(header) a {
-    color: #D11D17;
-}
-
-:not(header) a:hover {
-    color: #D11D17;
-    text-decoration: underline;
 }
