@@ -1,6 +1,6 @@
-Pluto
+Planet-hackNY
 =============
-Pluto is a blog aggregator written in Go, with Foundation styling to get you started. Pluto powers [Planet-hackNY](https://github.com/ChimeraCoder/Planet-hackNY).
+Planet-hackNY is a blog aggregator for [hackNY](http://www.hackny.org) fellows, powered by [Pluto](http://github.com/chimeracoder/pluto).
 
 Configuration & Setup
 -----------------------
