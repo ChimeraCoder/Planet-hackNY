@@ -229,6 +229,14 @@ func parseFeeds(filename string) ([][]string, error) {
 	return rows, err
 }
 
+func serveAbout(w http.ResponseWriter, r *http.Request) {
+	s1, err := template.ParseFiles("templates/base.tmpl", "templates/about.tmpl")
+	if err != nil {
+		panic(err)
+	}
+	s1.ExecuteTemplate(w, "base", nil)
+}
+
 func main() {
 	flag.Parse()
 
@@ -282,10 +290,11 @@ func main() {
 	}
 
 	//Order of routes matters
-	//Routes *will* match prefixes 
+	//Routes *will* match prefixes
 	http.Handle("/static/", http.FileServer(http.Dir("public")))
 	r.Get("/feeds/all", serveFeeds)
 	r.Get("/authors/all", serveAuthorInfo)
+	r.Get("/about", serveAbout)
 	r.Get("/", servePosts)
 	//r.Get("/", serveHome)
 	http.Handle("/", r)
