@@ -1,1 +1,1 @@
-web: Planet-hackNY
+web: Planet-hackNY -fetchposts
