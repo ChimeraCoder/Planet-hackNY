@@ -237,6 +237,14 @@ func serveAbout(w http.ResponseWriter, r *http.Request) {
 	s1.ExecuteTemplate(w, "base", nil)
 }
 
+func serveFellows(w http.ResponseWriter, r *http.Request) {
+	s1, err := template.ParseFiles("templates/base.tmpl", "templates/about.tmpl")
+	if err != nil {
+		panic(err)
+	}
+	s1.ExecuteTemplate(w, "base", nil)
+}
+
 func main() {
 	flag.Parse()
 
@@ -295,6 +303,7 @@ func main() {
 	r.Get("/feeds/all", serveFeeds)
 	r.Get("/authors/all", serveAuthorInfo)
 	r.Get("/about", serveAbout)
+	r.Get("/fellows/2013", serveFellows)
 	r.Get("/", servePosts)
 	//r.Get("/", serveHome)
 	http.Handle("/", r)
