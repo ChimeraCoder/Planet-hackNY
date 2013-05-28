@@ -238,7 +238,7 @@ func serveAbout(w http.ResponseWriter, r *http.Request) {
 }
 
 func serveFellows(w http.ResponseWriter, r *http.Request) {
-	s1, err := template.ParseFiles("templates/base.tmpl", "templates/about.tmpl")
+	s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2013.tmpl")
 	if err != nil {
 		panic(err)
 	}
