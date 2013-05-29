@@ -243,7 +243,7 @@ func serveFellows(w http.ResponseWriter, r *http.Request) {
    
     var fellows []Fellow
     if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
-        return c.Find(bson.M{}).All(&fellows)
+        return c.Find(bson.M{"year" : 2013}).All(&fellows)
     }); err != nil {
         panic(err)
     }
