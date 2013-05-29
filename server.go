@@ -25,6 +25,8 @@ const FEEDS_LIST_FILENAME = "feeds_list.txt"
 
 const BLOGPOSTS_DB = "blogposts"
 
+const FELLOWS_DB = "fellows"
+
 const POSTS_PER_PAGE = 10
 
 var fetchposts = flag.Bool("fetchposts", false, "fetch blogposts and add them to the database")
@@ -238,11 +240,19 @@ func serveAbout(w http.ResponseWriter, r *http.Request) {
 }
 
 func serveFellows(w http.ResponseWriter, r *http.Request) {
+   
+    var fellows []Fellow
+    if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
+        return c.Find(bson.M{}).All(&fellows)
+    }); err != nil {
+        panic(err)
+    }
+
 	s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2013.tmpl")
 	if err != nil {
 		panic(err)
 	}
-	s1.ExecuteTemplate(w, "base", nil)
+	s1.ExecuteTemplate(w, "base", fellows)
 }
 
 func main() {

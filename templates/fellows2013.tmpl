@@ -1,3 +1,16 @@
 {{define "body"}}
+
  Something about fellows here
+
+{{range . }}
+
+    {{.Name}}
+    {{.Year}}
+    {{.HeadshotUrl}}
+    {{.Blog}}
+    {{.Startup}}
+    {{.StartupLogo}}
+
+{{end}}
+
 {{end}}
