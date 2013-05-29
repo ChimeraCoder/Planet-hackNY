@@ -1,6 +1,5 @@
 compile:
-	go build -o build/a.out server.go mongo.go views.go planet_item.go
+	go build 
 
 clean:
 	go clean
-	find build/ -name *.out -delete
