@@ -2,6 +2,15 @@ Planet-hackNY
 =============
 Planet-hackNY is a blog aggregator for [hackNY](http://www.hackny.org) fellows, powered by [Pluto](http://github.com/chimeracoder/pluto).
 
+
+Adding Your Blog
+--------------------
+
+If you are a hackNY fellow, you can add your blog by submitting a patch or pull request. Edit `feeds_list.txt` and add a line at the bottom with both the link to your blog's RSS feed and your full name, separated by a tab (`\t`).
+
+Note: The separator *must* be a tab, not spaces. Your favorite text editor may be configured to convert tabs to spaces on save, in which case you may want to try `nano` (or `ed`, for bonus points).
+
+
 Configuration & Setup
 -----------------------
 
