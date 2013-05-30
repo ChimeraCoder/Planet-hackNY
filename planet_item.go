@@ -31,7 +31,10 @@ func NewItem(old rss.Item) (it Item, err error) {
 	if err != nil {
 		dt, err = time.Parse("Mon, 02 Jan 2006 15:04:05 -0700", old.PubDate)
 		if err != nil {
-			return
+			dt, err = time.Parse("2006-01-02T15:04:05-07:00", old.PubDate)
+			if err != nil {
+				return
+			}
 		}
 	}
 	it = Item{old.Title, old.Links, old.Description, old.Author, old.Categories, old.Comments, old.Enclosures, old.Guid, &dt, old.Source, old.Id, old.Generator, old.Contributors, old.Content}
