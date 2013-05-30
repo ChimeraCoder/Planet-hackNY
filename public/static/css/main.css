@@ -87,3 +87,15 @@ article h1 {
     list-style-type: none;
     margin: 0px;
 }
+
+
+
+.fellow{
+    width:150px;
+    text-align: center;
+}
+
+.name{
+    margin-top:5px;
+    font-weight: bold;
+}

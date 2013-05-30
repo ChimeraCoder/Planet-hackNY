@@ -1,15 +1,14 @@
 {{define "body"}}
 
- Something about fellows here
+ <h1> hackNY Fellows Class of 2013 </h1>
 
 {{range . }}
 
-    {{.Name}}
-    {{.Year}}
-    {{.HeadshotUrl}}
-    {{.Blog}}
-    {{.Startup}}
-    {{.StartupLogo}}
+	<div class="fellow">
+	    <img class="headshot" src="{{.HeadshotUrl}}"></img>
+	    <div class="name"><a href="{{.Blog}}">{{.Name}}</a></div>
+	    <img class="startup-logo" src="{{.StartupLogo}}"></img>
+	</div>
 
 {{end}}
 
