@@ -240,13 +240,13 @@ func serveAbout(w http.ResponseWriter, r *http.Request) {
 }
 
 func serveFellows(w http.ResponseWriter, r *http.Request) {
-   
-    var fellows []Fellow
-    if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
-        return c.Find(bson.M{"year" : 2013}).All(&fellows)
-    }); err != nil {
-        panic(err)
-    }
+
+	var fellows []Fellow
+	if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
+		return c.Find(bson.M{"year": 2013}).All(&fellows)
+	}); err != nil {
+		panic(err)
+	}
 
 	s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2013.tmpl")
 	if err != nil {
