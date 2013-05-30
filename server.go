@@ -32,7 +32,7 @@ const POSTS_PER_PAGE = 10
 var fetchposts = flag.Bool("fetchposts", false, "fetch blogposts and add them to the database")
 
 var SANITIZE_REGEX = regexp.MustCompile(`<script.*?>.*?<\/script>`)
-var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml)`)
+var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml|rss.xml)`)
 
 var (
 	httpAddr        = flag.String("addr", ":8000", "HTTP server address")
