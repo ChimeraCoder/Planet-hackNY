@@ -5,3 +5,4 @@ http://rubinovitz.com/rss	Jennifer Rubinovitz
 http://stevegattuso.me/feed.xml	Steve Gattuso
 http://blog.ranman.org/?feed=rss2	J. Randall Hunt
 http://blog.daniellobato.me/feed/	Daniel Lobato Garcia
+http://saewitz.com/rss.xml	Daniel Saewitz
