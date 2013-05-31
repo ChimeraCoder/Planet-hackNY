@@ -88,14 +88,36 @@ article h1 {
     margin: 0px;
 }
 
-
-
 .fellow{
-    width:150px;
+    width:125px;
     text-align: center;
+		display:inline;
+		margin:5px;
 }
 
+.headshot{
+	width:125px;
+}
 .name{
+		width:125px;
     margin-top:5px;
     font-weight: bold;
+		font-size:18px;
+}
+
+.school{
+	width:125px;
+	font-size:14px;
+}
+
+.startup-logo{
+	width:125px;
+}
+
+.left{
+	float:left;
+}
+
+.clear{
+	clear:both;
 }

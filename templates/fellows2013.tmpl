@@ -1,15 +1,21 @@
 {{define "body"}}
 
- <h1> hackNY Fellows Class of 2013 </h1>
-
-{{range . }}
-
-	<div class="fellow">
-	    <img class="headshot" src="{{.HeadshotUrl}}"></img>
-	    <div class="name"><a href="{{.Blog}}">{{.Name}}</a></div>
-	    <img class="startup-logo" src="{{.StartupLogo}}"></img>
+	<h1> hackNY Fellows Class of 2013 </h1>
+	<div class="fellows clear">
+		{{range . }}
+		<div class="fellow left">
+				<img class="headshot" src="{{.HeadshotUrl}}">
+				</img>
+				<div class="name">
+					<a href="{{.Blog}}">{{.Name}}
+					</a>
+				</div>
+				<div class="school">{{ .SchoolName}}</div>
+				<a href="{{.StartupUrl}}">
+					<img class="startup-logo" src="{{.StartupLogo}}">
+					</img>
+				</a>
+		</div>
+		{{end}}
 	</div>
-
-{{end}}
-
 {{end}}
