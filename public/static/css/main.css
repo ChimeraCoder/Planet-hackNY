@@ -107,7 +107,7 @@ article h1 {
 
 .school{
 	width:125px;
-	font-size:12px;
+	font-size:14px;
 }
 
 .startup-logo{
@@ -120,4 +120,8 @@ article h1 {
 
 .clear{
 	clear:both;
+}
+
+.fellows-table{
+	width:100%;
 }
