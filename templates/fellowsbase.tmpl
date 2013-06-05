@@ -31,6 +31,15 @@
                 <div class="large-8 columns">
                     {{template "body" .}}
                 </div>
+								 <div class="large-4 sidebar columns">
+                    <h3> Contributors </h3>
+                    <ul class="link-list">
+                        {{range .Authors}}
+                            <li><a href="{{.Uri}}">{{.Name}}</a></li>
+                        {{end}}
+                    </ul>
+                </div>
+
             </div>
         </div>
     </body>
