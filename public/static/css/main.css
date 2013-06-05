@@ -125,3 +125,8 @@ article h1 {
 .fellows-table{
 	width:100%;
 }
+
+#copy{
+	line-height: 130%;
+	margin-bottom: 5%;
+}
