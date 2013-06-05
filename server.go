@@ -32,7 +32,7 @@ const POSTS_PER_PAGE = 10
 var fetchposts = flag.Bool("fetchposts", false, "fetch blogposts and add them to the database")
 
 var SANITIZE_REGEX = regexp.MustCompile(`<script.*?>.*?<\/script>`)
-var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml|rss.xml)`)
+var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml|rss.xml|atom.xml)`)
 
 var (
 	httpAddr        = flag.String("addr", ":8000", "HTTP server address")
@@ -312,8 +312,7 @@ func main() {
 	r.Get("/feeds/all", serveFeeds)
 	r.Get("/authors/all", serveAuthorInfo)
 	r.Get("/about", serveAbout)
-	//r.Get("/fellows/2013", serveFellows)
-	r.Get("/supersecretfacebook", serveFellows)
+	r.Get("/fellows/2013", serveFellows)
 	r.Get("/", servePosts)
 	//r.Get("/", serveHome)
 	http.Handle("/", r)
