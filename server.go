@@ -254,6 +254,23 @@ s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2
 	s1.ExecuteTemplate(w, "base", fellows)
 }
 
+func serveIframeFellows(w http.ResponseWriter, r *http.Request) {
+	var fellows []Fellow
+	if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
+		return c.Find(bson.M{"year": 2013}).Sort("name").All(&fellows)
+	}); err != nil {
+		panic(err)
+	}
+
+	// kills header for iframe
+	s1, err := template.ParseFiles("templates/iframefellowsbase.tmpl", "templates/fellows2013.tmpl")
+	if err != nil {
+		panic(err)
+	}
+	s1.ExecuteTemplate(w, "base", fellows)
+}
+
+
 func main() {
 	flag.Parse()
 
@@ -313,6 +330,7 @@ func main() {
 	r.Get("/authors/all", serveAuthorInfo)
 	r.Get("/about", serveAbout)
 	r.Get("/fellows/2013", serveFellows)
+	r.Get("/fellows/iframe/2013", serveIframeFellows)
 	r.Get("/", servePosts)
 	//r.Get("/", serveHome)
 	http.Handle("/", r)
