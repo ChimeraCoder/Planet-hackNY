@@ -1,21 +1,39 @@
 {{define "body"}}
-
 	<h1> hackNY Fellows Class of 2013 </h1>
-	<div class="fellows clear">
-		{{range . }}
-		<div class="fellow left">
-				<img class="headshot" src="{{.HeadshotUrl}}">
-				</img>
-				<div class="name">
-					<a href="{{.Blog}}">{{.Name}}
-					</a>
-				</div>
-				<div class="school">{{ .SchoolName}}</div>
-				<a href="{{.StartupUrl}}">
-					<img class="startup-logo" src="{{.StartupLogo}}">
-					</img>
-				</a>
-		</div>
-		{{end}}
+	<div id="copy">
+			hackNY is excited to announce the class of 2013 hackNY Fellows!
+
+			Our 37 Fellows come from 27 universities as far west as Pomona College, as far south as the University of Puerto Rico, and as far east as NYU Abu Dhabi! Thanks to the generosity of a diverse community of supporters, the Fellows program includes community-style housing in Union Square as well as a series of pedagogical lectures introducing the hackNY Fellows to founders, investors, and technologists from the NYC startup ecosystem.
+
+			The members of the class of 2013 hackNY Fellows and their host startups are:
 	</div>
+	<table class="fellows-table">
+  	<thead>
+    	<tr>
+				<th width="200">Name</th>
+				<th>School</th>
+				<th width="150">Startup</th>
+   		 </tr>
+  	</thead>
+  	<tbody>
+		{{range . }}
+				<tr>
+					<td class ="name">
+						<a href="{{.Blog}}">
+							{{.Name}}
+						</a>
+					</td>
+					<td class="school">
+						{{ .SchoolName}}
+					</td>
+					<td>
+						<a href="{{.StartupUrl}}">
+							<img class="startup-logo" src="{{.StartupLogo}}">
+							</img>
+						</a>
+					</td>
+				</tr>
+		{{end}}
+		</tbody>
+	</table>
 {{end}}

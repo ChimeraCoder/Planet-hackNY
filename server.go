@@ -32,7 +32,7 @@ const POSTS_PER_PAGE = 10
 var fetchposts = flag.Bool("fetchposts", false, "fetch blogposts and add them to the database")
 
 var SANITIZE_REGEX = regexp.MustCompile(`<script.*?>.*?<\/script>`)
-var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml|rss.xml)`)
+var AUTHOR_URL_REGEX = regexp.MustCompile(`(.*?)\/(rss|feed.xml|rss.xml|atom.xml)`)
 
 var (
 	httpAddr        = flag.String("addr", ":8000", "HTTP server address")
@@ -242,7 +242,7 @@ func serveAbout(w http.ResponseWriter, r *http.Request) {
 func serveFellows(w http.ResponseWriter, r *http.Request) {
 	var fellows []Fellow
 	if err := withCollection(FELLOWS_DB, func(c *mgo.Collection) error {
-		return c.Find(bson.M{"year": 2013}).All(&fellows)
+		return c.Find(bson.M{"year": 2013}).Sort("name").All(&fellows)
 	}); err != nil {
 		panic(err)
 	}
