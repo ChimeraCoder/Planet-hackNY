@@ -247,7 +247,7 @@ func serveFellows(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 
-s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2013.tmpl")
+	s1, err := template.ParseFiles("templates/fellowsbase.tmpl", "templates/fellows2013.tmpl")
 	if err != nil {
 		panic(err)
 	}
@@ -269,7 +269,6 @@ func serveIframeFellows(w http.ResponseWriter, r *http.Request) {
 	}
 	s1.ExecuteTemplate(w, "base", fellows)
 }
-
 
 func main() {
 	flag.Parse()
