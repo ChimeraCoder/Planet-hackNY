@@ -10,5 +10,5 @@ http://www.mrjordangoldstein.com/atom.xml	Jordan Goldstein
 http://blog.eitanadler.com/	Eitan Adler
 http://medium.com/feed/@basilksiddiqui/	Basil Siddiqui
 http://chmullig.com/feed	Chris Mulligan
-
+http://alexsander.ca/rss.xml	Alexsander Akers
 
