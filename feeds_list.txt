@@ -11,4 +11,4 @@ http://blog.eitanadler.com/	Eitan Adler
 http://medium.com/feed/@basilksiddiqui/	Basil Siddiqui
 http://chmullig.com/feed	Chris Mulligan
 http://alexsander.ca/rss.xml	Alexsander Akers
-
+http://newlyancient.com/atom/1  Morgante Pell
