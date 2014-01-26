@@ -1,7 +1,7 @@
 package main
 
 import (
-	"labix.org/v2/mgo"
+	"github.com/ChimeraCoder/mgo"
 )
 
 var mongodb_session *mgo.Session
