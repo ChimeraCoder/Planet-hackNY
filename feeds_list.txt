@@ -13,3 +13,4 @@ http://chmullig.com/feed	Chris Mulligan
 http://blog.alexsander.ca/rss	Alexsander Akers
 http://newlyancient.com/atom/1	Morgante Pell
 http://blog.seangransee.com/rss	Sean Gransee
+http://thecalvinchan.com/blog/rss/	Calvin Chan
