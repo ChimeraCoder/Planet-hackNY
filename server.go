@@ -223,7 +223,8 @@ func parseFeeds(filename string) ([][]string, error) {
 	defer file.Close()
 
 	reader := csv.NewReader(file)
-	reader.Comma = '\t'
+	reader.Comma = ','
+	reader.TrimLeadingSpace = true
 	rows, err := reader.ReadAll()
 	if err != nil {
 		return nil, err
@@ -316,7 +317,7 @@ func main() {
 			}
 			feed_url := feed_info[0]
 			feed_author := feed_info[1]
-			log.Printf("Found %s", feed_url)
+			log.Printf("Found %s by %s", feed_url, feed_author)
 			go func(uri string, author string) {
 				scrapeRss(uri, author)
 			}(feed_url, feed_author)

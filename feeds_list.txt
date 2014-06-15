@@ -1,16 +1,16 @@
-http://www.processthings.com/rss	Dan Mundy
-http://varnull.adityamukerjee.net/rss	Aditya Mukerjee
-http://blog.goneill.net/rss	Gerard O'Neill
-http://rubinovitz.com/rss	Jennifer Rubinovitz
-http://stevegattuso.me/feed.xml	Steve Gattuso
-http://blog.ranman.org/?feed=rss2	J. Randall Hunt
-http://blog.daniellobato.me/feed/	Daniel Lobato Garcia
-http://saewitz.com/rss.xml	Daniel Saewitz
-http://www.mrjordangoldstein.com/atom.xml	Jordan Goldstein
-http://blog.eitanadler.com/	Eitan Adler
-http://medium.com/feed/@basilksiddiqui/	Basil Siddiqui
-http://chmullig.com/feed	Chris Mulligan
-http://blog.alexsander.ca/rss	Alexsander Akers
-http://newlyancient.com/atom/1	Morgante Pell
-http://blog.seangransee.com/rss	Sean Gransee
-http://thecalvinchan.com/blog/rss/	Calvin Chan
+"http://www.processthings.com/rss","Dan Mundy"
+"http://varnull.adityamukerjee.net/rss","Aditya Mukerjee"
+"http://blog.goneill.net/rss","Gerard O'Neill"
+"http://rubinovitz.com/rss","Jennifer Rubinovitz"
+"http://stevegattuso.me/feed.xml","Steve Gattuso"
+"http://blog.ranman.org/?feed=rss2","J. Randall Hunt"
+"http://blog.daniellobato.me/feed/","Daniel Lobato Garcia"
+"http://saewitz.com/rss.xml","Daniel Saewitz"
+"http://www.mrjordangoldstein.com/atom.xml","Jordan Goldstein"
+"http://blog.eitanadler.com/","Eitan Adler"
+"http://medium.com/feed/@basilksiddiqui/","Basil Siddiqui"
+"http://chmullig.com/feed","Chris Mulligan"
+"http://blog.alexsander.ca/rss","Alexsander Akers"
+"http://newlyancient.com/atom/1","Morgante Pell"
+"http://blog.seangransee.com/rss","Sean Gransee"
+"http://thecalvinchan.com/blog/rss/","Calvin Chan"
