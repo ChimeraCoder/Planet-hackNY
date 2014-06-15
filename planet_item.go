@@ -7,14 +7,14 @@ import (
 
 type Item struct {
 	// RSS and Shared fields
-	Title         string
-	Links         []*rss.Link
-	Description   string
-	Author        rss.Author
-	Categories    []*rss.Category
-	Comments      string
-	Enclosures    []*rss.Enclosure
-    Guid          *string `bson:",omitempty"`
+	Title       string
+	Links       []*rss.Link
+	Description string
+	Author      rss.Author
+	Categories  []*rss.Category
+	Comments    string
+	Enclosures  []*rss.Enclosure
+	Guid        *string `bson:",omitempty"`
 
 	PubDateParsed *time.Time
 	Source        *rss.Source
