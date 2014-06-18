@@ -58,6 +58,10 @@ article h1 {
     font-size: xx-large;
 }
 
+article h1 a, article h1 a:hover {
+  color: black;
+}
+
 .metabox {
     margin-top: 1em;
     color: #aaa;
