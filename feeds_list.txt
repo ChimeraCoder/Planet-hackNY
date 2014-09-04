@@ -3,7 +3,7 @@
 "http://blog.goneill.net/rss","Gerard O'Neill"
 "http://rubinovitz.com/rss","Jennifer Rubinovitz"
 "http://stevegattuso.me/feed.xml","Steve Gattuso"
-"http://blog.ranman.org/?feed=rss2","J. Randall Hunt"
+"http://blog.ranman.org/rss/","J. Randall Hunt"
 "http://blog.daniellobato.me/feed/","Daniel Lobato Garcia"
 "http://saewitz.com/rss.xml","Daniel Saewitz"
 "http://www.mrjordangoldstein.com/atom.xml","Jordan Goldstein"
